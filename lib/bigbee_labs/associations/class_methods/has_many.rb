@@ -3,6 +3,7 @@ module BigbeeLabs
     module ClassMethods
       module HasMany
 
+=begin
         def has_many(class_sym, options={})
           define_method(class_sym) do 
             other_klass = options[:class_name] ? options[:class_name].constantize : class_sym.to_s.camelize.pluralize.constantize
@@ -14,6 +15,7 @@ module BigbeeLabs
             end
           end
         end
+=end
 
       end
     end

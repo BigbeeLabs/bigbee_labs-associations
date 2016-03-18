@@ -3,6 +3,6 @@ require 'bigbee_labs/associations/class_methods'
 
 module BigbeeLabs
   module Associations
-
+    include ClassMethods
   end
 end
