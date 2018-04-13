@@ -5,6 +5,7 @@ module BigbeeLabs
         def poro_has_many(class_sym, options={})
           klass_name = options[:class_name]
           klass_name ||= class_sym.to_s.singularize.camelize
+
           define_method(class_sym) do 
             klass = klass_name.constantize
             collection = nil
@@ -15,6 +16,7 @@ module BigbeeLabs
             end
             collection
           end
+
         end
       end
     end
